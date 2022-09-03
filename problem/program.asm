@@ -1,15 +1,12 @@
 // Daniel Alejandro Arango Echeverri
 // 000438887
 // daniel.arangoe@upb.edu.co
-
-
-
-INICIO) 
+(INICIO) 
  @KBD
  D=M
- @82	//R
- D=D-A
- @SETREC //salto a realizar el rectangulo con estos parametros
+ @84		//T
+ D=D-A 
+ @CRUZ
  D;JEQ
  
  @KBD
@@ -18,60 +15,11 @@ INICIO)
  D=D-A 
  @SETCL
  D;JEQ
-
- @KBD
- D=M
- @84		//T
- D=D-A 
- @CRUZ
- D;JEQ
-
- 
  
  @INICIO
  0;JMP
  
- (SETREC)
- @23231 //16384 + (128*32)
- D=A
- @coord //variable donde inicia el dibujo
- M=D 
- @42 //candidad de registros a pintar
- D=A
- @cont //contador filas pantalla
- M=D
- @32
- D=A 
- @salto
- M=D
- @Color
- M=-1
- @RECT
- 0;JMP
-
-
-
-
- 
-(SETCL)
- @16384 //16384 + (128*32)
- D=A
- @coord //variable donde inicia el dibujo
- M=D 
- @8192 //candidad de registros a pintar
- D=A
- @cont //contador filas pantalla
- M=D
- @1
- D=A 
- @salto
- M=D
- @Color
- M=0
- @RECT
- 0;JMP
-
- (CRUZ)
+  (CRUZ)
  @16400 
  D=A
  @coord 
@@ -91,7 +39,7 @@ INICIO)
  @RECT
  0;JMP
 
- (CRUZ2)
+(CRUZ2)
  @20480 
  D=A
  @coord 
@@ -111,6 +59,24 @@ INICIO)
  @RECT
  0;JMP
 
+ 
+(SETCL)
+ @16384 //16384 + (128*32)
+ D=A
+ @coord //variable donde inicia el dibujo
+ M=D 
+ @8192 //candidad de registros a pintar
+ D=A
+ @cont //contador filas pantalla
+ M=D
+ @1
+ D=A 
+ @salto
+ M=D
+ @Color
+ M=0
+ @RECT
+ 0;JMP
  
 (RECT)
  @coord //16384 + (128*32)
@@ -145,8 +111,6 @@ INICIO)
  @PAINT
  0;JMP
 
-
- 
 (END)
 @bool
 D=M 
