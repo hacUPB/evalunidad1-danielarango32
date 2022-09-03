@@ -1,4 +1,4 @@
-// COLOCA AQUÍ TU NOMBRE COMPLETO
-// COLOCA AQUÍ TU ID
-// COLOCA AQUÍ TU CORREO ELECTRÓNICO
+// Daniel Alejandro Arango Echeverri
+// 000438887
+// daniel.arangoe@upb.edu.co
 
