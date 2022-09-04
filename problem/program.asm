@@ -32,8 +32,10 @@
  D=A 
  @salto
  M=D
+ @256
+ D=A
  @Color
- M=1
+ M=D
  @bool
  M=0
  @RECT
